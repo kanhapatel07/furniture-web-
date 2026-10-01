@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Furni - Admin Panel</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+    
+        <div class="logo">
+            <img src="C:\Users\kisha\OneDrive\Pictures\7ae8e030-fe62-498c-9543-087d27a48f89.jpg" , alt="">
+            <h1>Furni.</h1>
+        </div>
+        
+        <!-- <h1>Furni.</h1> -->
+
+        <nav>
+
+            <a href="#dashboard" data-section="dashboard">
+                Dashboard
+            </a>
+
+            <a href="#category" data-section="category">
+                Category
+            </a>
+
+            <a href="#product" data-section="product">
+                Product
+            </a>
+             
+            <a href="#order" data-section="order">
+                Order
+            </a>
+
+            <a href="#profile" data-section="profile">
+                Profile
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main>
+
+
+        <!-- ================= DASHBOARD ================= -->
+
+        <section id="dashboard" class="page-section">
+
+            <h2>Admin Dashboard</h2>
+
+            <p>
+                Welcome to Farni Admin Panel
+            </p>
+
+
+            <div class="dashboard-cards">
+
+                <!-- Total Products -->
+
+                <div class="card">
+
+                    <h3>Total Products</h3>
+
+                    <p id="totalProducts">0</p>
+
+                    <button type="button" class="view-btn" data-section="product">
+                        View Products
+                    </button>
+
+                </div>
+
+
+                <!-- Total Orders -->
+
+                <div class="card">
+
+                    <h3>Total Orders</h3>
+
+                    <p id="totalOrders">0</p>
+
+                    <button type="button" class="view-btn" data-section="Order">
+                        View Orders
+                    </button>
+                
+                </div>
+
+
+                <!-- Total Users -->
+
+                <div class="card">
+
+                    <h3>Total Users</h3>
+
+                    <p id="totalUsers">0</p>
+
+                </div>
+
+
+                <!-- Total Sales -->
+
+                <div class="card">
+
+                    <h3>Total Sales</h3>
+
+                    <p id="totalSales">₹0</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= CATEGORY ================= -->
+
+        <section id="category" class="page-section">
+
+            <h2>Category</h2>
+
+
+            <div class="form-container">
+
+                <label for="categoryName">
+                    Category:
+                </label>
+
+                <input type="text" id="categoryName" placeholder="Enter category" required>
+
+
+                <label for="description">
+                    Description:
+                </label>
+
+                <input type="text" id="description" placeholder="Enter description" required>
+
+
+                <button type="button" id="categorySubmitButton">
+                    + Add
+                </button>
+
+            </div>
+
+
+
+            <!-- Category Table -->
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Category</th>
+
+                            <th>Description</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="categoryTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= PRODUCT ================= -->
+
+
+
+        <section id="product" class="page-section">
+
+            <h2>Product</h2>
+
+            <!-- Add Product Button -->
+            <button type="button" id="openProductForm" class="add-product-btn">
+
+                + Add Product
+
+            </button>
+
+
+            <!-- Product Table -->
+            <div class="table-container">
+
+                <table>
+            <!-- <select id="categoryId"> -->
+                    <thead>
+
+                        <tr>
+                            <th>ID</th>
+                            <th>Product Image</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Status</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Category</th>
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+            </select>
+                    <tbody id="productTable"></tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- ================= PRODUCT FORM ================= -->
+
+            <div id="productFormSection" class="product-form-section" style="display: none;">
+
+                <h2 id="formTitle">
+                    Add Product
+                </h2>
+
+
+                <form id="productForm">
+
+                    <!-- Product Image -->
+
+                    <label for="image">
+                        Product Image:
+                    </label>
+
+                    <input type="file" id="image" name="productUrl" accept="image/*">
+                    
+
+                    <!-- Product Name -->
+
+                    <label for="productName">
+                        Product Name:
+                    </label>
+
+                    <input type="text" id="productName" name="name" placeholder="Enter product name" required>
+
+
+                    <!-- Description -->
+
+                    <label for="productDescription">
+                        Description:
+                    </label>
+
+                    <input type="text" id="productDescription" name="description" placeholder="Enter description"
+                        required>
+
+
+                    <!-- Status -->
+
+                    <label for="productStatus">
+                        Status:
+                    </label>
+
+                    <select id="productStatus" name="status" required>
+
+                        <option value=""> Select </option>
+
+                        <option value="ACTIVE">
+                            ACTIVE
+                        </option>
+
+                        <option value="INACTIVE">
+                            INACTIVE
+                        </option>
+
+                    </select>
+
+
+                    <!-- Price -->
+
+                    <label for="productPrice">
+                        Price:
+                    </label>
+
+                    <input type="number" id="productPrice" name="price" placeholder="Enter price" required>
+
+
+                    <!-- Stock -->
+
+                    <label for="productStock">
+                        Stock:
+                    </label>
+
+                    <input type="number" id="productStock" name="stock" placeholder="Enter stock" required>
+
+
+                    <!-- Product Category -->
+
+                    <label for="productCategory">
+                        Category:
+                    </label>
+
+                    <select id="productCategory" name="categoryId" required>
+
+                        <option value="">
+                            Select Category
+                        </option>
+
+                    </select>
+
+
+                    <!-- Form Buttons -->
+
+                    <div class="form-buttons">
+
+                        <button type="submit" id="productSubmitButton">
+
+                            Add Product
+
+                        </button>
+
+
+                        <button type="button" id="productCancelButton" class="cancel-btn">
+
+                            Cancel
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+       
+
+    <!-- ================= ORDER ================= -->
+   
+    <section id="order" class="page-section">
+
+        <h2>Orders</h2>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer Phone</th>
+                        <th>Address</th>
+                        <th>Total</th>
+                        <th>Date & Time</Time></th>
+                        <th>Status</th>
+                        <th>Action</th>
+                         <!-- <th>View</th> -->
+                    </tr>
+
+                </thead>
+
+                <tbody id="orderTable">
+
+                    <tr>
+                        <td colspan="7">
+                            Loading orders...
+                        </td>
+                    </tr>
+
+                </tbody>
+                
+            </table>
+
+        </div>
+
+        <!-- ======================================================
+     order PAGINATION
+     ====================================================== -->
+
+<div class="order-pagination">
+
+    <!-- PREVIOUS -->
+
+    <button
+        type="button"
+        id="prevPage"
+        class="pagination-prev"
+    >
+        &lt; Previous
+    </button>
+
+
+    <!-- PAGE NUMBER -->
+
+    <div
+        id="paginationNumbers"
+        class="pagination-numbers"
+    >
+    </div>
+
+
+    <!-- NEXT -->
+
+    <button
+        type="button"
+        id="nextPage"
+        class="pagination-next"
+    >
+        Next &gt;
+    </button>
+
+</div>
+        
+
+    </section>
+        <!-- ================= PROFILE ================= -->
+<!-- 
+         <section id="profile" class="page-section">
+
+            <h2 class="pro">
+                Profile
+            </h2>
+
+
+            <div class="profile-container">
+
+                <div class="profile-icon">
+                    👤
+                </div>
+
+                <h3>
+                    Admin
+                </h3>
+
+                <p>
+                    Administrator
+                </p>
+
+
+
+                <div class="profile-dropdown">
+
+                    <button type="button" id="profileButton" class="profile-btn">
+
+                        Profile ▼
+
+                    </button>
+
+
+                    <div class="profile-menu">
+
+                        <a href="#profile">
+                            Profile
+                        </a>
+
+
+                        <a href="login/login.html" id="logoutButton">
+
+                            Logout
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>  -->
+        
+ <!-- =====================================================
+     PROFILE
+===================================================== -->
+
+<section id="profile" class="page-section">
+
+    <h2 class="pro">
+        Profile
+    </h2>
+
+
+    <div class="profile-container">
+
+
+        <!-- Profile Icon -->
+
+        <div class="profile-icon">
+            👤
+        </div>
+
+
+        <h3>
+            Admin
+        </h3>
+
+
+        <p>
+            Administrator
+        </p>
+
+
+        <!-- Profile Button -->
+
+        <div class="profile-dropdown">
+
+            <button
+                type="button"
+                id="profileButton"
+                class="profile-btn"
+            >
+                Profile ▼
+            </button>
+
+
+            <div
+                class="profile-menu"
+                id="profileMenu"
+            >
+
+                <a href="#profile">
+                    Profile
+                </a>
+
+
+                <a
+                    href="C:\\Users\\kisha\\OneDrive\\Desktop\\furniture\\furni-1.0.0\\kanha1\\login\\login.html"
+                    id="logoutButton"
+                >
+                    Logout
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             PROFILE FORM
+             Initially Hidden
+        ================================================== -->
+
+        <div
+            id="profileFormContainer"
+            class="profile-form-container"
+            style="display: none;"
+        >
+
+            <h3>
+                Edit Profile
+            </h3>
+
+
+            <form id="profileForm">
+
+
+                <!-- Name -->
+
+                <div class="profile-form-group">
+
+                    <label for="profileName">
+                        Name:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="profileName"
+                        name="name"
+                        placeholder="Enter your name"
+                        value="Admin"
+                    >
+
+                </div>
+
+
+                <!-- Email -->
+
+                <div class="profile-form-group">
+
+                    <label for="profileEmail">
+                        Email:
+                    </label>
+
+                    <input
+                        type="email"
+                        id="profileEmail"
+                        name="email"
+                        placeholder="Enter your email"
+                    >
+
+                </div>
+
+
+                <!-- Phone -->
+
+                <div class="profile-form-group">
+
+                    <label for="profilePhone">
+                        Phone:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="profilePhone"
+                        name="phone"
+                        placeholder="Enter phone number"
+                    >
+
+                </div>
+
+
+                <!-- Address -->
+
+                <div class="profile-form-group">
+
+                    <label for="profileAddress">
+                        Address:
+                    </label>
+
+                    <input
+                        id="profileAddress"
+                        name="address"
+                        placeholder="Enter address"
+                        rows="3"
+                    >
+
+                </div>
+
+
+                <!-- Buttons -->
+
+                <div class="profile-form-buttons">
+
+                    <button
+                        type="submit"
+                        class="save-profile-btn"
+                    >
+                        Save
+                    </button>
+
+
+                    <button
+                        type="button"
+                        id="closeProfileForm"
+                        class="cancel-profile-btn"
+                    >
+                        Cancel
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+    </main>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="app.js"></script>
+
+    <script src="category-api.js"></script>
+
+    <script src="product-api.js"></script>
+
+     <script src="order-api.js"></script> 
+
+    <script src="profile.js"></script>
+
+
+
+</body>
+
+</html>

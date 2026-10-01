@@ -1,0 +1,1409 @@
+<!-- /*
+* Bootstrap 5
+* Template Name: Furni
+* Template Author: Untree.co
+* Template URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href="favicon.png">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap4" />
+
+		<!-- Bootstrap CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+		<link href="css/tiny-slider.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/style1.css" rel="stylesheet">
+		<link href="css/pagination.css" rel="stylesheet">
+		<title>Furni Free Bootstrap 5 Template for Furniture and Interior Design Websites by Untree.co </title>
+
+</head>
+
+	<body>
+
+		<!-- Start Header/Navigation -->
+		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+
+			<div class="container">
+				<a class="navbar-brand" href="index.html">Furni<span>..</span></a>
+
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarsFurni">
+					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+						<li class="nav-item active">
+							<a class="nav-link" href="index.html">Home</a>
+						</li>
+						<li><a class="nav-link" href="shop.html">Shop</a></li>
+						<li><a class="nav-link" href="about.html">About us</a></li>
+						<li><a class="nav-link" href="services.html">Services</a></li>
+						<li><a class="nav-link" href="blog.html">Blog</a></li>
+						<li><a class="nav-link" href="contact.html">Contact us</a></li>
+				    </ul>
+                        
+					
+					<!-- <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+						li><a class="nav-link" href="kanha1/login/login.html"><img src="images/user.svg" alt="login"> Login </a> </li> 
+						<li><a class="nav-link" href="cart.html"><img src="images/cart.svg" alt="cart">  Cart </a></li>
+					</ul>  -->
+					
+					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+
+						<!-- Login -->
+						 <li id="loginMenu">
+							<a class="nav-link" href="kanha1/login/login.html">
+								<img src="images/user.svg" alt="login">
+								Login
+							</a>
+						</li> 
+
+						<!-- My Profile -->
+						<li id="profileMenu" style="display:none;">
+							<a
+								class="nav-link"
+								href="#"
+								id="profileBtn">
+
+								<img src="images/user.svg" alt="profile">
+
+								My Profile
+
+							</a>
+						</li>
+
+						<!-- Cart -->
+						<li>
+							<a class="nav-link" href="cart.html">
+								<img src="images/cart.svg" alt="cart">
+								Cart
+							</a>
+						</li>
+
+					</ul>
+
+					<!--start-->
+					
+                   <!-- last -->
+				</div>
+			</div>
+			
+		</nav>
+		<!-- End Header/Navigation -->
+         <!-- ================= PROFILE MODAL ================= -->
+
+<div id="profileModal" class="profile-modal">
+
+    <div class="profile-card">
+
+        <!-- Header -->
+        <div class="profile-header">
+
+            <h3>My Profile</h3>
+
+            <button
+                type="button"
+                id="closeProfileBtn"
+                class="profile-close-btn">
+
+                &times;
+
+            </button>
+
+        </div>
+
+
+        <!-- Profile Image -->
+        <div class="profile-image-box">
+
+            <img
+                id="profilePreview"
+                src="images/user.svg"
+                alt="Profile"
+                class="profile-image">
+
+        </div>
+
+
+        <!-- Profile Image URL -->
+        <div class="profile-field">
+
+            <label for="profileUrl">
+                Profile Image:
+            </label>
+
+            <input
+                type="file"
+                id="profileUrl"
+                class="profile-input"
+				accept="image/*"
+                placeholder="Enter profile image URL">
+
+        </div>
+
+
+        <!-- Name -->
+        <div class="profile-field">
+
+            <label for="profileName">
+                Name:
+            </label>
+
+            <input
+                type="text"
+                id="profileName"
+                class="profile-input"
+                placeholder="Enter name">
+
+        </div>
+
+
+        <!-- Mobile -->
+        <div class="profile-field">
+
+            <label for="profileMobile">
+                Mobile:
+            </label>
+
+            <input
+                type="text"
+                id="profileMobile"
+                class="profile-input"
+                placeholder="Enter mobile">
+
+        </div>
+
+
+        <!-- Gender -->
+        <div class="profile-field">
+
+            <label for="profileGender">
+                Gender:
+            </label>
+
+            <select
+                id="profileGender"
+                class="profile-input">
+
+                <option value="">
+                    Select Gender
+                </option>
+
+                <option value="Male">
+                    Male
+                </option>
+
+                <option value="Female">
+                    Female
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Update Profile -->
+        <button
+            type="button"
+            id="updateProfileBtn"
+            class="profile-update-btn">
+
+            Update Profile
+
+        </button>
+
+
+        <!-- Logout -->
+        <button
+            type="button"
+            id="profileLogoutBtn"
+            class="profile-logout-btn">
+
+            Logout
+
+        </button>
+
+    </div>
+
+</div>
+		
+			<!-- profile -->
+
+		<!-- Start Hero Section -->
+			<div class="hero">
+				<div class="container">
+					<div class="row justify-content-between">
+						<div class="col-lg-5">
+							<div class="intro-excerpt">
+								<h1>Modern Interior <span clsas="d-block">Design Studio</span></h1>
+								<p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
+								<p><a href="" class="btn btn-secondary me-2">Shop Now</a><a href="#" class="btn btn-white-outline">Explore</a></p>
+							</div>
+						</div>
+						<div class="col-lg-7">
+							<div class="hero-img-wrap">
+								<img src="images/couch.png" class="img-fluid">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- End Hero Section -->
+		
+		<!-- Start Product Section -->
+		
+		<div class="product-section">
+		
+			<div class="container">
+		
+				<div class="row">
+		
+					<!-- Left Content -->
+		
+					<div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
+		
+						<h2 class="mb-4 section-title">
+							Crafted with excellent material.
+						</h2>
+		
+						<p class="mb-4">
+							Discover our latest products and furniture collection.
+						</p>
+		
+						<p>
+							<a href="shop.html" class="btn">
+								Explore
+							</a>
+						</p>
+		
+					</div>
+		
+		
+					<!-- API Products -->
+		
+					<div id="homeProducts" class="col-12 col-lg-9">
+		
+						<div class="row" id="productList">
+		
+							<div class="col-12 text-center">
+		
+								<p>
+									Loading products...
+								</p>
+		
+							</div>
+		
+						</div>
+		
+					</div>
+		
+				</div>
+		
+			</div>
+		
+		</div>
+		
+		<!-- End Product Section -->
+
+		<!-- ================= PAGINATION ================= -->
+
+			<div class="product-pagination-wrapper">
+				<div id="productPagination" class="product-pagination">
+
+					<button
+						type="button"
+						class="pagination-btn"
+						id="prevPage">
+						<i class="fa fa-chevron-left"></i>
+					</button>
+
+					<div id="paginationNumbers"></div>
+
+					<button
+						type="button"
+						class="pagination-btn"
+						id="nextPage">
+						<i class="fa fa-chevron-right"></i>
+					</button>
+
+				</div>
+			</div>
+
+<!-- ================= END PAGINATION ================= -->
+			
+
+
+		<!-- Start Why Choose Us Section -->
+		<div class="why-choose-section">
+			<div class="container">
+				<div class="row justify-content-between">
+					<div class="col-lg-6">
+						<h2 class="section-title">Why Choose Us</h2>
+						<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
+
+						<div class="row my-5">
+							<div class="col-6 col-md-6">
+								<div class="feature">
+									<div class="icon">
+										<img src="images/truck.svg" alt="Image" class="imf-fluid">
+									</div>
+									<h3>Fast &amp; Free Shipping</h3>
+									<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+								</div>
+							</div>
+
+							<div class="col-6 col-md-6">
+								<div class="feature">
+									<div class="icon">
+										<img src="images/bag.svg" alt="Image" class="imf-fluid">
+									</div>
+									<h3>Easy to Shop</h3>
+									<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+								</div>
+							</div>
+
+							<div class="col-6 col-md-6">
+								<div class="feature">
+									<div class="icon">
+										<img src="images/support.svg" alt="Image" class="imf-fluid">
+									</div>
+									<h3>24/7 Support</h3>
+									<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+								</div>
+							</div>
+
+							<div class="col-6 col-md-6">
+								<div class="feature">
+									<div class="icon">
+										<img src="images/return.svg" alt="Image" class="imf-fluid">
+									</div>
+									<h3>Hassle Free Returns</h3>
+									<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="col-lg-5">
+						<div class="img-wrap">
+							<img src="images/why-choose-us-img.jpg" alt="Image" class="img-fluid">
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- End Why Choose Us Section -->
+
+		<!-- Start We Help Section -->
+		<div class="we-help-section">
+			<div class="container">
+				<div class="row justify-content-between">
+					<div class="col-lg-7 mb-5 mb-lg-0">
+						<div class="imgs-grid">
+							<div class="grid grid-1"><img src="images/img-grid-1.jpg" alt="Untree.co"></div>
+							<div class="grid grid-2"><img src="images/img-grid-2.jpg" alt="Untree.co"></div>
+							<div class="grid grid-3"><img src="images/img-grid-3.jpg" alt="Untree.co"></div>
+						</div>
+					</div>
+					<div class="col-lg-5 ps-lg-5">
+						<h2 class="section-title mb-4">We Help You Make Modern Interior Design</h2>
+						<p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
+
+						<ul class="list-unstyled custom-list my-4">
+							<li>Donec vitae odio quis nisl dapibus malesuada</li>
+							<li>Donec vitae odio quis nisl dapibus malesuada</li>
+							<li>Donec vitae odio quis nisl dapibus malesuada</li>
+							<li>Donec vitae odio quis nisl dapibus malesuada</li>
+						</ul>
+						<p><a herf="#" class="btn">Explore</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End We Help Section -->
+
+		<!-- Start Popular Product -->
+		<div class="popular-product">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+						<div class="product-item-sm d-flex">
+							<div class="thumbnail">
+								<img src="images/product-1.png" alt="Image" class="img-fluid">
+							</div>
+							<div class="pt-3">
+								<h3>Nordic Chair</h3>
+								<p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
+								<p><a href="#">Read More</a></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+						<div class="product-item-sm d-flex">
+							<div class="thumbnail">
+								<img src="images/product-2.png" alt="Image" class="img-fluid">
+							</div>
+							<div class="pt-3">
+								<h3>Kruzo Aero Chair</h3>
+								<p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
+								<p><a href="#">Read More</a></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+						<div class="product-item-sm d-flex">
+							<div class="thumbnail">
+								<img src="images/product-3.png" alt="Image" class="img-fluid">
+							</div>
+							<div class="pt-3">
+								<h3>Ergonomic Chair</h3>
+								<p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
+								<p><a href="#">Read More</a></p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- End Popular Product -->
+
+		<!-- Start Testimonial Slider -->
+		<div class="testimonial-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 mx-auto text-center">
+						<h2 class="section-title">Testimonials</h2>
+					</div>
+				</div>
+
+				<div class="row justify-content-center">
+					<div class="col-lg-12">
+						<div class="testimonial-slider-wrap text-center">
+
+							<div id="testimonial-nav">
+								<span class="prev" data-controls="prev"><span class="fa fa-chevron-left"></span></span>
+								<span class="next" data-controls="next"><span class="fa fa-chevron-right"></span></span>
+							</div>
+
+							<div class="testimonial-slider">
+								
+								<div class="item">
+									<div class="row justify-content-center">
+										<div class="col-lg-8 mx-auto">
+
+											<div class="testimonial-block text-center">
+												<blockquote class="mb-5">
+													<p>&ldquo;Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque.&rdquo;</p>
+												</blockquote>
+
+												<div class="author-info">
+													<div class="author-pic">
+														<img src="images/person-1.png" alt="Maria Jones" class="img-fluid">
+													</div>
+													<h3 class="font-weight-bold">Maria Jones</h3>
+													<span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div> 
+								<!-- END item -->
+
+								<div class="item">
+									<div class="row justify-content-center">
+										<div class="col-lg-8 mx-auto">
+
+											<div class="testimonial-block text-center">
+												<blockquote class="mb-5">
+													<p>&ldquo;Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque.&rdquo;</p>
+												</blockquote>
+
+												<div class="author-info">
+													<div class="author-pic">
+														<img src="images/person-1.png" alt="Maria Jones" class="img-fluid">
+													</div>
+													<h3 class="font-weight-bold">Maria Jones</h3>
+													<span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div> 
+								<!-- END item -->
+
+								<div class="item">
+									<div class="row justify-content-center">
+										<div class="col-lg-8 mx-auto">
+
+											<div class="testimonial-block text-center">
+												<blockquote class="mb-5">
+													<p>&ldquo;Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque.&rdquo;</p>
+												</blockquote>
+
+												<div class="author-info">
+													<div class="author-pic">
+														<img src="images/person-1.png" alt="Maria Jones" class="img-fluid">
+													</div>
+													<h3 class="font-weight-bold">Maria Jones</h3>
+													<span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div> 
+								<!-- END item -->
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Testimonial Slider -->
+
+		<!-- Start Blog Section -->
+		<div class="blog-section">
+			<div class="container">
+				<div class="row mb-5">
+					<div class="col-md-6">
+						<h2 class="section-title">Recent Blog</h2>
+					</div>
+					<div class="col-md-6 text-start text-md-end">
+						<a href="#" class="more">View All Posts</a>
+					</div>
+				</div>
+
+				<div class="row">
+
+					<div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
+						<div class="post-entry">
+							<a href="#" class="post-thumbnail"><img src="images/post-1.jpg" alt="Image" class="img-fluid"></a>
+							<div class="post-content-entry">
+								<h3><a href="#">First Time Home Owner Ideas</a></h3>
+								<div class="meta">
+									<span>by <a href="#">Kristin Watson</a></span> <span>on <a href="#">Dec 19, 2021</a></span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
+						<div class="post-entry">
+							<a href="#" class="post-thumbnail"><img src="images/post-2.jpg" alt="Image" class="img-fluid"></a>
+							<div class="post-content-entry">
+								<h3><a href="#">How To Keep Your Furniture Clean</a></h3>
+								<div class="meta">
+									<span>by <a href="#">Robert Fox</a></span> <span>on <a href="#">Dec 15, 2021</a></span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
+						<div class="post-entry">
+							<a href="#" class="post-thumbnail"><img src="images/post-3.jpg" alt="Image" class="img-fluid"></a>
+							<div class="post-content-entry">
+								<h3><a href="#">Small Space Furniture Apartment Ideas</a></h3>
+								<div class="meta">
+									<span>by <a href="#">Kristin Watson</a></span> <span>on <a href="#">Dec 12, 2021</a></span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- End Blog Section -->	
+
+		<!-- Start Footer Section -->
+		<footer class="footer-section">
+			<div class="container relative">
+
+				<div class="sofa-img">
+					<img src="images/sofa.png" alt="Image" class="img-fluid">
+				</div>
+
+				<div class="row">
+					<div class="col-lg-8">
+						<div class="subscription-form">
+							<h3 class="d-flex align-items-center"><span class="me-1"><img src="images/envelope-outline.svg" alt="Image" class="img-fluid"></span><span>Subscribe to Newsletter</span></h3>
+
+							<form action="#" class="row g-3">
+								<div class="col-auto">
+									<input type="text" class="form-control" placeholder="Enter your name">
+								</div>
+								<div class="col-auto">
+									<input type="email" class="form-control" placeholder="Enter your email">
+								</div>
+								<div class="col-auto">
+									<button class="btn btn-primary">
+										<span class="fa fa-paper-plane"></span>
+									</button>
+								</div>
+							</form>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="row g-5 mb-5">
+					<div class="col-lg-4">
+						<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Furni<span>.</span></a></div>
+						<p class="mb-4">Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant</p>
+
+						<ul class="list-unstyled custom-social">
+							<li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
+							<li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
+							<li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
+							<li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
+						</ul>
+					</div>
+
+					<div class="col-lg-8">
+						<div class="row links-wrap">
+							<div class="col-6 col-sm-6 col-md-3">
+								<ul class="list-unstyled">
+									<li><a href="#">About us</a></li>
+									<li><a href="#">Services</a></li>
+									<li><a href="#">Blog</a></li>
+									<li><a href="#">Contact us</a></li>
+								</ul>
+							</div>
+
+							<div class="col-6 col-sm-6 col-md-3">
+								<ul class="list-unstyled">
+									<li><a href="#">Support</a></li>
+									<li><a href="#">Knowledge base</a></li>
+									<li><a href="#">Live chat</a></li>
+								</ul>
+							</div>
+
+							<div class="col-6 col-sm-6 col-md-3">
+								<ul class="list-unstyled">
+									<li><a href="#">Jobs</a></li>
+									<li><a href="#">Our team</a></li>
+									<li><a href="#">Leadership</a></li>
+									<li><a href="#">Privacy Policy</a></li>
+								</ul>
+							</div>
+
+							<div class="col-6 col-sm-6 col-md-3">
+								<ul class="list-unstyled">
+									<li><a href="#">Nordic Chair</a></li>
+									<li><a href="#">Kruzo Aero</a></li>
+									<li><a href="#">Ergonomic Chair</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="border-top copyright">
+					<div class="row pt-4">
+						<div class="col-lg-6">
+							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> Distributed By <a hreff="https://themewagon.com">ThemeWagon</a>  <!-- License information: https://untree.co/license/ -->
+            </p>
+						</div>
+
+						<div class="col-lg-6 text-center text-lg-end">
+							<ul class="list-unstyled d-inline-flex ms-auto">
+								<li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</footer>
+		<!-- End Footer Section -->	
+
+
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/tiny-slider.js"></script>
+		<script src="js/custom.js"></script>
+
+		     <!-- API -->
+
+		<script src="kanha1/cart/index-product.js"></script>
+        <script src="kanha1/cart/cart-api.js"></script>
+	 
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+
+					// =========================================
+					// PROFILE API
+					// =========================================
+
+					const PROFILE_API =
+						// "http://192.168.29.93:3002/api/auth/profile";
+						   "http://192.168.29.157:3002/api/auth/profile";
+
+
+					// =========================================
+					// ELEMENTS
+					// =========================================
+
+					const loginMenu =
+						document.getElementById("loginMenu");
+
+					const profileMenu =
+						document.getElementById("profileMenu");
+
+					const profileBtn =
+						document.getElementById("profileBtn");
+
+					const profileModal =
+						document.getElementById("profileModal");
+
+					const closeProfileBtn =
+						document.getElementById("closeProfileBtn");
+
+					const profilePreview =
+						document.getElementById("profilePreview");
+
+					const profileUrl =
+						document.getElementById("profileUrl");
+
+					const profileName =
+						document.getElementById("profileName");
+
+					const profileMobile =
+						document.getElementById("profileMobile");
+
+					const profileGender =
+						document.getElementById("profileGender");
+
+					const updateProfileBtn =
+						document.getElementById("updateProfileBtn");
+
+					const profileLogoutBtn =
+						document.getElementById("profileLogoutBtn");
+
+
+					// =========================================
+					// GET TOKEN
+					// =========================================
+
+					function getToken() {
+
+						return localStorage.getItem("token");
+
+					}
+
+
+					// =========================================
+					// CHECK LOGIN
+					// =========================================
+
+					function checkLogin() {
+
+						const token = getToken();
+
+						if (
+							token &&
+							token !== "undefined" &&
+							token !== "null"
+						) {
+
+							if (loginMenu) {
+								loginMenu.style.display = "none";
+							}
+
+							if (profileMenu) {
+								profileMenu.style.display = "block";
+							}
+
+						} else {
+
+							if (loginMenu) {
+								loginMenu.style.display = "block";
+							}
+
+							if (profileMenu) {
+								profileMenu.style.display = "none";
+							}
+
+						}
+
+					}
+
+					checkLogin();
+
+
+					// =========================================
+					// GET PROFILE
+					// =========================================
+
+					async function getProfile() {
+
+						const token = getToken();
+
+						if (!token) {
+
+							alert("Please login first.");
+
+							return;
+
+						}
+
+
+						try {
+
+							const response = await fetch(
+								PROFILE_API,
+								{
+									method: "GET",
+
+									headers: {
+										"Authorization":
+											`Bearer ${token}`,
+
+										"Accept":
+											"application/json"
+									}
+								}
+							);
+
+
+							const result =
+								await response.json();
+
+							console.log(
+								"GET Profile Response:",
+								result
+							);
+
+
+							// =================================
+							// ERROR
+							// =================================
+
+							if (!response.ok) {
+
+								console.error(
+									"Profile GET failed:",
+									result
+								);
+
+								if (
+									response.status === 401 ||
+									response.status === 403
+								) {
+
+									localStorage.removeItem("token");
+
+									checkLogin();
+
+								}
+
+								alert(
+									result.message ||
+									"Unable to load profile."
+								);
+
+								return;
+
+							}
+
+
+							// =================================
+							// GET USER DATA
+							// =================================
+
+							const user =
+								result.data ||
+								result.user ||
+								result.profile ||
+								result;
+
+
+							console.log(
+								"User Profile:",
+								user
+							);
+
+
+							// =================================
+							// SET FORM VALUES
+							// =================================
+
+							// profileUrl.value =
+							// 	user.profileUrl || "";
+
+							profileName.value =
+								user.name || "";
+
+							profileMobile.value =
+								user.mobile || "";
+
+							profileGender.value =
+								user.gender || "";
+
+
+							// =================================
+							// PROFILE IMAGE
+							// =================================
+
+							setProfileImage(
+								user.profileUrl
+							);
+
+
+						} catch (error) {
+
+							console.error(
+								"GET Profile Error:",
+								error
+							);
+
+							alert(
+								"Unable to connect to profile API."
+							);
+
+						}
+
+					}
+
+
+
+				// =========================================
+				// SET PROFILE IMAGE FROM API
+				// =========================================
+
+				function setProfileImage(url) {
+
+					if (!url || typeof url !== "string") {
+
+						profilePreview.src =
+							"images/user.svg";
+
+						return;
+					}
+
+					let imageUrl = url.trim();
+
+					// Full URL
+					if (
+						imageUrl.startsWith("http://") ||
+						imageUrl.startsWith("https://")
+					) {
+
+						profilePreview.src = imageUrl;
+
+					} else {
+
+						// Make sure slash exists
+						if (!imageUrl.startsWith("/")) {
+							imageUrl = "/" + imageUrl;
+						}
+
+						profilePreview.src =
+							"http://192.168.29.93:3002" + imageUrl;
+					}
+
+					// If image doesn't load
+					profilePreview.onerror = function () {
+
+						console.error(
+							"Profile image could not be loaded:",
+							profilePreview.src
+						);
+
+						profilePreview.src =
+							"images/user.svg";
+					};
+				}
+
+
+					// =========================================
+					// OPEN MY PROFILE
+					// =========================================
+
+					if (profileBtn) {
+
+						profileBtn.addEventListener(
+							"click",
+							async function (event) {
+
+								event.preventDefault();
+
+
+								const token = getToken();
+
+
+								if (!token) {
+
+									window.location.href =
+										"kanha1/login/login.html";
+
+									return;
+
+								}
+
+
+								// API se latest profile lao
+								await getProfile();
+
+
+								// Modal open karo
+								profileModal.style.display =
+									"block";
+
+							}
+						);
+
+					}
+
+
+					// =========================================
+					// CLOSE PROFILE
+					// =========================================
+
+					if (closeProfileBtn) {
+
+						closeProfileBtn.addEventListener(
+							"click",
+							function () {
+
+								profileModal.style.display =
+									"none";
+
+							}
+						);
+
+					}
+
+
+					// =========================================
+					// CLOSE OUTSIDE CLICK
+					// =========================================
+
+					if (profileModal) {
+
+						profileModal.addEventListener(
+							"click",
+							function (event) {
+
+								if (
+									event.target ===
+									profileModal
+								) {
+
+									profileModal.style.display =
+										"none";
+
+								}
+
+							}
+						);
+
+					}
+
+
+					
+
+				// =========================================
+				// IMAGE PREVIEW
+				// =========================================
+
+				if (profileUrl) {
+
+					profileUrl.addEventListener("change", function () {
+
+						const file = profileUrl.files[0];
+
+						if (!file) {
+
+							profilePreview.src =
+								"images/user.svg";
+
+							return;
+						}
+
+						// Check image
+						if (!file.type.startsWith("image/")) {
+
+							alert("Please select a valid image.");
+
+							profileUrl.value = "";
+
+							profilePreview.src =
+								"images/user.svg";
+
+							return;
+						}
+
+						// Show selected image immediately
+						const reader = new FileReader();
+
+						reader.onload = function (event) {
+
+							profilePreview.src =
+								event.target.result;
+
+						};
+
+						reader.readAsDataURL(file);
+
+					});
+
+				}
+
+					// =========================================
+					// PUT - UPDATE PROFILE
+					// =========================================
+
+					if (updateProfileBtn) {
+
+						updateProfileBtn.addEventListener(
+							"click",
+							async function () {
+
+								const token = getToken();
+
+
+								if (!token) {
+
+									alert(
+										"Please login first."
+									);
+
+									return;
+
+								}
+
+
+								// =================================
+								// FORM DATA
+								// =================================
+								// const formData = new FormData();
+								// formData.append(
+								// 	"name",
+								// 	profileName.value.trim()
+								// );
+
+								// formData.append(
+								// 	"mobile",
+								// 	profileMobile.value.trim()
+								// );
+
+								// formData.append(
+								// 	"gender",
+								// 	profileGender.value
+								// );
+
+								const formData = new FormData();
+
+								formData.append(
+									"name",
+									profileName.value.trim()
+								);
+
+								formData.append(
+									"mobile",
+									profileMobile.value.trim()
+								);
+
+								formData.append(
+									"gender",
+									profileGender.value
+								);
+
+								const imageFile = profileUrl.files[0];
+
+								if (imageFile) {
+
+									formData.append(
+										"profileUrl",
+										imageFile
+									);
+								}
+
+								// =================================
+								// CHECK FORMDATA
+								// =================================
+
+								console.log(
+									"PUT Profile FormData:"
+								);
+
+								for (const [key, value] of formData.entries()) {
+									console.log(key, value);
+								}
+
+
+								// =================================
+								// BUTTON LOADING
+								// =================================
+
+								updateProfileBtn.disabled = true;
+
+								updateProfileBtn.textContent =
+									"Updating...";
+
+
+								try {
+
+									const response = await fetch(
+										PROFILE_API,
+										{
+											method: "PUT",
+
+											headers: {
+
+												"Authorization":
+													`Bearer ${token}`,
+
+												"Accept":
+													"application/json"
+
+											},
+
+											// IMPORTANT:
+											// Content-Type manually mat lagana
+											body: formData
+										}
+									);
+
+
+									const result =
+										await response.json();
+
+
+									console.log(
+										"PUT Profile Response:",
+										result
+									);
+
+									// =================================
+									// API ERROR
+									// =================================
+
+									if (!response.ok) {
+
+										alert(
+											result.message ||
+											"Profile update failed."
+										);
+
+										return;
+
+									}
+
+
+									// =================================
+									// SUCCESS
+									// =================================
+
+									alert(
+										"Profile updated successfully!"
+									);
+
+
+									// Latest data GET karo
+									await getProfile();
+
+
+									// Modal close
+									profileModal.style.display =
+										"none";
+
+
+								} catch (error) {
+
+									console.error(
+										"PUT Profile Error:",
+										error
+									);
+
+									alert(
+										"Something went wrong while updating profile."
+									);
+
+								} finally {
+
+									updateProfileBtn.disabled =
+										false;
+
+									updateProfileBtn.textContent =
+										"Update Profile";
+
+								}
+
+							}
+						);
+
+					}
+
+
+					// =========================================
+					// LOGOUT
+					// =========================================
+
+					if (profileLogoutBtn) {
+
+						profileLogoutBtn.addEventListener(
+							"click",
+							function () {
+
+								localStorage.removeItem(
+									"token"
+								);
+
+								localStorage.removeItem(
+									"user"
+								);
+
+								localStorage.removeItem(
+									"userData"
+								);
+
+
+								alert(
+									"Logout successful!"
+								);
+
+
+								window.location.href =
+									"kanha1/login/login.html";
+
+							}
+						);
+
+					}
+
+				});
+			
+
+        </script>
+		
+	</body>
+
+</html>

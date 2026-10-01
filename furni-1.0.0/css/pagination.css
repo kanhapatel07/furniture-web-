@@ -1,0 +1,90 @@
+/* =========================================
+   PRODUCT PAGINATION
+========================================= */
+
+.product-pagination-wrapper {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.product-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+#paginationNumbers {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pagination-btn,
+.pagination-number {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin-bottom: 200px;
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #3b5d50;
+    background: #ffffff;
+    color: #3b5d50;
+
+    border-radius: 4px;
+
+    font-size: 14px;
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.pagination-btn:hover,
+.pagination-number:hover {
+    background: #3b5d50;
+    color: #ffffff;
+}
+
+.pagination-number.active {
+    background: #3b5d50;
+    color: #ffffff;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination-btn:disabled:hover {
+    background: #ffffff;
+    color: #3b5d50;
+}
+
+
+/* Mobile */
+
+@media (max-width: 576px) {
+
+    .product-pagination {
+        gap: 3px;
+    }
+
+    #paginationNumbers {
+        gap: 3px;
+    }
+
+    .pagination-btn,
+    .pagination-number {
+        width: 34px;
+        height: 34px;
+        font-size: 12px;
+    }
+}
